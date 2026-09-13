@@ -6,6 +6,12 @@ The advisors are emulations of real people's public thinking: their published fr
 
 ## What a verdict looks like
 
+A real one from my own log, 2026-08-03. The question was whether a browser audio tool's desktop layout should converge toward its future plugin UI. Six seats, two rounds. One advisor flipped from NO to CONDITIONAL YES and the verdict says why.
+
+![A real board verdict: GO, reframed as structure-only convergence, with votes, biggest fight, five conditions, money read, 48-hour test and next action](docs/verdict-example.png)
+
+The template every verdict follows:
+
 ```
 ## BOARD VERDICT: RESHAPE
 Confidence: medium
@@ -27,7 +33,7 @@ Cheapest 48-hour test: Post the community idea as a poll to your existing
 Next action: Write the first email this week.
 ```
 
-That example is invented. Your board will argue about your things.
+The text example above is invented. Your board will argue about your things.
 
 ## Install
 
