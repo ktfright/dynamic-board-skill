@@ -57,6 +57,18 @@ decision-log.md header row:
 
 ## Mode 2: /board [question] — deliberation
 
+Copy this into the reply and tick it off:
+
+```text
+Deliberation progress:
+- [ ] 1 Intake: context, lanes, advisors, last 10 log rows read
+- [ ] 2 Panel seated and stated, overrides taken
+- [ ] 3 Round 1 returned from every seat
+- [ ] 4 Round 2 returned from every seat
+- [ ] 5 Verdict written, math checked
+- [ ] 6 Decision saved, log row appended, STATUS/INDEX/CHANGELOG updated
+```
+
 ### Step 1: Intake
 Read `context.md`, `lanes.md`, `advisors.md`, and the last ~10 rows of `decision-log.md`. If the question is thin, ask up to 3 clarifiers in one batch (stakes, options already considered, deadline). "Just run it" skips clarifiers. Compress everything into a brief paragraph pasted into every advisor prompt.
 
@@ -78,7 +90,7 @@ Spin up all seated advisors in parallel (one general-purpose agent each, single 
 Send every advisor ALL Round 1 positions. Each returns 150-400 words: who they disagree with most and why (quoting the actual argument), whether anything changed their mind, and a **final vote**.
 
 ### Step 5: Judge synthesis (you, the main session — not an agent)
-Do not average votes. Name the central tension and resolve it. Output in chat, skimmable:
+Do not average votes. Name the central tension and resolve it. Output in chat, in exactly this shape:
 
 ```
 ## BOARD VERDICT: GO / RESHAPE / KILL / SPLIT-TEST
@@ -97,6 +109,8 @@ Confidence: low / medium / high
 
 SPLIT-TEST = the board is genuinely split and both paths are cheap to test; define both tests.
 The Judge may also rule "take this to /roast first" if the idea is raw and unvalidated.
+
+**Math check before the write-up.** Recompute the money read from the advisors' committed numbers (cost, hours, revenue range, time to first dollar). If anything does not add up, correct it in the verdict, say what changed, and check again. Only then go to Step 6.
 
 ### Step 6: Write-up
 Save the full record (seating, both rounds, synthesis) to `02-outputs/decisions/yyyy-mm-dd-slug/decision.md`. Append one row to decision-log.md (leave `actual outcome` and `reviewed on` empty). Update STATUS.md, INDEX.md, CHANGELOG.md. Chat shows the synthesis only.

@@ -5,6 +5,14 @@ Default roster shipped with /board. Vetted July 2026 for emulation quality (is t
 Seat types: money / contrarian / audience / domain / life.
 Accuracy notes start empty; check-ins fill them.
 
+## Contents
+
+- Business & personal brand
+- Content & creator business
+- AI
+- Music production & pro audio
+- Watchlist (named, not seatable)
+
 ## Business & personal brand
 
 **Alex Hormozi** (personal-brand, producer-products) — money, domain
